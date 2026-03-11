@@ -21,7 +21,7 @@ function connectAIS() {
         console.log("✅ Cloud Server connected to AISStream!");
         const subscription = {
             APIKey: API_KEY,
-            BoundingBoxes: [[[-90, -180], [90, 180]]], // Lumut Port Bounding Box
+            BoundingBoxes: [[[1.0, 95.0], [6.0, 105.0]]], // Lumut Port Bounding Box
             FilterMessageTypes: ["PositionReport"]
         };
         ws.send(JSON.stringify(subscription));
